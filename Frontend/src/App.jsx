@@ -28,7 +28,7 @@ function App() {
   }, [darkMode]);
 
   return (
-    <div>
+    <div className="max-w-380 m-auto">
       <Header darkMode={darkMode} setDarkMode={setDarkMode} />
 
       <main className="sm:px-16 lg:px-22 bg-slate-100 dark:bg-slate-900 text-slate-900 dark:text-white">
