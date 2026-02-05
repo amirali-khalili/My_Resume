@@ -5,30 +5,7 @@ import TailwindLogo from "../../assets/images/Logos/Tailwind.png";
 import PythonLogo from "../../assets/images/Logos/Python.png";
 import jsLogo from "../../assets/images/Logos/JavaScript.png";
 
-function AboutMe() {
-  const skills = [
-    {
-      title: "React",
-      desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit remearum in",
-      img: ReactLogo,
-    },
-    {
-      title: "Tailwind",
-      desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit remearum in",
-      img: TailwindLogo,
-    },
-    {
-      title: "Python",
-      desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit remearum in",
-      img: PythonLogo,
-    },
-    {
-      title: "JavaScript",
-      desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit remearum in",
-      img: jsLogo,
-    },
-  ];
-
+function AboutMe({ skills }) {
   return (
     <>
       <section className="flex lg:justify-between items-center mt-7 mx-auto w-[75%]">
@@ -70,7 +47,7 @@ function AboutMe() {
         <div className="grid grid-cols-2  gap-4 mt-11 bg-transparent ">
           {skills.map((skill) => (
             <SkillCard
-              key={skill.title} // همیشه یه key بده به کامپوننت‌های لیست
+              key={skill.id}
               title={skill.title}
               desc={skill.desc}
               img={skill.img}

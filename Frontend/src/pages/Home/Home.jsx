@@ -3,10 +3,11 @@ import { useState, useEffect } from "react";
 import Header from "../../components/Header/Header";
 import IntroSection from "../../components/IntroSection/IntroSection";
 import AboutMe from "../../components/AboutMe/AboutMe";
-
+import axios from "axios";
 
 function Home() {
   const [darkMode, setDarkMode] = useState(false);
+  const [skills, setSkills] = useState([]);
 
   useEffect(() => {
     const savedMode = localStorage.getItem("darkMode") === "true";
@@ -27,6 +28,20 @@ function Home() {
     localStorage.setItem("darkMode", darkMode);
   }, [darkMode]);
 
+  // Get Skills
+  useEffect(() => {
+    const fetchSkills = async () => {
+      try {
+        const res = await axios.get("http://localhost:8000/skills");
+        setSkills(res.data);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+
+    fetchSkills();
+  }, []);
+
   return (
     <div className="max-w-380 m-auto relative">
       {/* Blured Circle */}
@@ -39,7 +54,7 @@ function Home() {
         <IntroSection />
 
         {/* About Me */}
-        <AboutMe />
+        <AboutMe skills={skills} />
       </main>
     </div>
   );
