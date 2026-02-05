@@ -3,29 +3,32 @@ import SkillCard from "../SkillCard/SkillCard";
 import ReactLogo from "../../assets/images/Logos/React.png";
 import TailwindLogo from "../../assets/images/Logos/Tailwind.png";
 import PythonLogo from "../../assets/images/Logos/Python.png";
-import jsLogo from "../../assets/images/Logos/JavaScript.png";
 
 function AboutMe({ skills }) {
   return (
     <>
-      <section className="flex lg:justify-between items-center mt-7 mx-auto w-[75%]">
+      <section className="container flex lg:justify-between gap-20 flex-col lg:flex-row items-center ">
         {/* Image */}
         <div>
-          <img src="/src/assets/images/Group 62.svg" alt="" />
+          <img
+            className="lg:w-400"
+            src="/src/assets/images/Group 62.svg"
+            alt=""
+          />
         </div>
 
         {/* Titles & Desc & Skill Cards */}
-        <div className="flex lg:flex-col gap-10 w-98">
+        <div className="flex lg:flex-col gap-10">
           {/* About Me & Desc*/}
           <div className="flex flex-col gap-8">
             {/* Title */}
 
-            <h1 className="flex gap-2 text-7xl">
+            <h1 className="flex gap-2 text-4xl sm:text-5xl  md:text-6xl lg:text-7xl">
               <span>درباره</span>
               <span className="text-primary">من</span>
             </h1>
             {/* Desc */}
-            <div className="text-[18px] text-secondary-light dark:text-secondary-dark">
+            <div className="text-[14px] lg:text-[18px] text-secondary-light dark:text-secondary-dark">
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe,
                 deleniti ipsam? Dolorem nemo repudiandae quod iusto harum?
@@ -38,13 +41,15 @@ function AboutMe({ skills }) {
       </section>
 
       {/* Skills */}
-      <section className="relative w-[75%] mx-auto mt-20 mb-10">
+      <section className="container relative mt-30">
         {/* Blured Circle */}
-        <div className="circle--blured  top-[-5%] left-[15%]"></div>
+        <div className="circle--blured  top-[-5%] left-[24%] z-0"></div>
 
-        <h1 className="font-Morabba-Bold text-5xl ">مهارت ها</h1>
+        <h1 className="font-Morabba-Bold text-4xl sm:text-5xl   lg:text-6xl ">
+          مهارت ها
+        </h1>
 
-        <div className="grid grid-cols-2  gap-4 mt-11 bg-transparent ">
+        <div className="grid grid-cols-1 lg:grid-cols-2  gap-4 mt-11 bg-transparent ">
           {skills.map((skill) => (
             <SkillCard
               key={skill.id}
