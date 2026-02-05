@@ -1,0 +1,29 @@
+{
+  "skills": [
+    {
+      "id": 1,
+      "title": "JavaScript",
+      "desc": "Front-end language",
+      "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
+      "data": "1404/11/11"
+    },
+    {
+      "id": 2,
+      "title": "Python",
+      "desc": "Back-end and AI",
+      "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
+    },
+    {
+      "id": 3,
+      "title": "React",
+      "desc": "Frontend framework",
+      "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
+    },
+    {
+      "id": 4,
+      "title": "Node.js",
+      "desc": "Backend runtime",
+      "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg"
+    }
+  ]
+}

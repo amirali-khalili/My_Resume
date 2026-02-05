@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 @font-face {
   font-family: "Dana-DemiBold";
@@ -30,9 +31,6 @@
   src: url("/src/assets/fonts/Morabba/woff2/Morabba-Light.woff2");
 }
 
-@import "tailwindcss";
-@custom-variant dark (&:where(.dark, .dark *));
-
 @theme {
   /* Fonts */
 
@@ -54,8 +52,40 @@
   /* box shadow */
   --shadow-normal: 0px 1px 10px rgba(0, 0, 0, 0.05);
 }
-
 @layer components {
+  .circle--blured {
+    height: 700px;
+    width: 700px;
+    background-image: radial-gradient(
+      closest-side,
+      rgba(65, 144, 255, 0.562),
+      transparent
+    );
+    position: absolute;
+    z-index: 1;
+  }
+
+  .bg-skill-gradient-light {
+    background: linear-gradient(
+      to bottom right,
+      #f8fafc 10%,
+      #e2e8f0 35%,
+      #cbd5e1 70%,
+      #e2e8f0 85%,
+      #f8fafc 100%
+    );
+  }
+
+  .bg-skill-gradient-dark {
+    background: linear-gradient(
+      to bottom right,
+      #0f172a 10%,
+      #132043 35%,
+      #213774 70%,
+      #1e3167 85%,
+      #0f172a 100%
+    );
+  }
 }
 
 @custom-variant child (& > *);
