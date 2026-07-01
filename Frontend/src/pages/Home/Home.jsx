@@ -6,33 +6,10 @@ import AboutMe from "../../components/AboutMe/AboutMe";
 import ArticlesSlider from "../../components/ArticlesSlider/ArticlesSlider";
 import axios from "axios";
 import { useTheme } from "../../Context/ThemeContext.jsx";
-import Portfolio from "../../components/Portfolio/Portfolio.jsx";
 import Contact from "../../components/Contact/Contact";
+import PortfolioSection from "../../components/PortfolioSection/PortfolioSection.jsx";
 
 function Home() {
-  const location = useLocation();
-
-  useEffect(() => {
-    if (!location.hash) return;
-
-    let attempts = 0;
-    const maxAttempts = 30; // حداکثر 30 * 100ms = 3 ثانیه صبر می‌کنیم
-
-    const tryScroll = () => {
-      const el = document.querySelector(location.hash);
-      attempts++;
-
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth" });
-      } else if (attempts < maxAttempts) {
-        setTimeout(tryScroll, 100);
-      }
-    };
-
-    const timer = setTimeout(tryScroll, 100);
-    return () => clearTimeout(timer);
-  }, [location]);
-
   return (
     <div className="">
       {/* Blured Circle */}
@@ -43,9 +20,7 @@ function Home() {
         <Hero />
 
         {/* Portfolio */}
-        <div id="portfolio" className="scroll-mt-24">
-          <Portfolio />
-        </div>
+        <PortfolioSection />
 
         {/* About Me */}
         <AboutMe />

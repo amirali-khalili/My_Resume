@@ -33,12 +33,7 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <a
-                    href="https://tailwindcss.com/"
-                    className="hover:underline"
-                  >
-                    رزومه
-                  </a>
+            
                 </li>
               </ul>
             </div>
