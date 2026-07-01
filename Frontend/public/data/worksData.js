@@ -12,7 +12,7 @@ import ChandRasanehPic9 from "../../src/assets/images/ChandRasaneh/pic9.jpg";
 
 
 import ChandRasanehConver2 from "../../src/assets/images/Portfolio/image.png";
-import ChandRasanehConver3 from "../../src/assets/images/Portfolio/basig-ansar.ir_.png";
+import ChandRasanehConver3 from "../../src/assets/images/Portfolio/basig-ansar.ir__compressed.jpg";
 
 
 

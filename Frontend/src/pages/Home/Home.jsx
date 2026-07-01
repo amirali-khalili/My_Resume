@@ -7,6 +7,7 @@ import ArticlesSlider from "../../components/ArticlesSlider/ArticlesSlider";
 import axios from "axios";
 import { useTheme } from "../../Context/ThemeContext.jsx";
 import Portfolio from "../../components/Portfolio/Portfolio.jsx";
+import Contact from "../../components/Contact/Contact";
 
 function Home() {
   const location = useLocation();
@@ -37,7 +38,7 @@ function Home() {
       {/* Blured Circle */}
       <div className="circle--blured top-[-15%] right-[-20%]"></div>
 
-      <main className="container space-y-34">
+      <main className="container space-y-20">
         {/* Intro Section */}
         <Hero />
 
@@ -51,6 +52,12 @@ function Home() {
 
         {/* Articles Slider */}
         <ArticlesSlider />
+ 
+
+        <div id="contact" >
+              <Contact />
+        </div>
+
       </main>
     </div>
   );

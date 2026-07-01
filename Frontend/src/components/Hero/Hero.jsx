@@ -2,6 +2,7 @@ import React from "react";
 import { FaDownload } from "react-icons/fa6";
 import toast, { Toaster } from "react-hot-toast";
 import TypingEffect from "../TypingEffect/TypingEffect";
+import rez from "../../assets/images/Portfolio/rezome.jpg";
 
 function Hero() {
   const skills = ["طراح اپلیکیشن", "طراح سایت", "سئو", "تمامی خدمات مربوط به سایت"];
@@ -26,18 +27,28 @@ function Hero() {
 
 
           </p>
-          <a
-            href="/Frontend/data/db.json"
-            download
-            className="flex items-center gap-2 rounded-2xl text-[18px] py-2 px-10 bg-primary hover:bg-blue-600 cursor-pointer text-white font-Dana-Medium transition-colors"
-          >
-            دانلود رزومه‌
-            <FaDownload />
-          </a>
+         <a
+  href={rez}
+  download="AmirAli-Khalili-Resume.png"
+  className="flex items-center gap-2 rounded-2xl text-[18px] py-2 px-10 bg-primary hover:bg-blue-600 cursor-pointer text-white font-Dana-Medium transition-colors"
+>
+  دانلود رزومه
+  <FaDownload />
+</a>
+<button
+  onClick={() => {
+    document.getElementById("contact")?.scrollIntoView({
+      behavior: "smooth",
+    });
+  }}
+  className="rounded-2xl text-[18px] py-3 px-10 border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 hover:scale-105"
+>
+  ارتباط با من
+</button>
         </div>
 
         {/* Picture */}
-        <div className="h-fit w-[70%] lg:w-[40%] pt-2 bg-primary dark:bg-slate-800 rounded-4xl border border-slate-200 dark:border-slate-700 shadow-2xl box--shadow--effect">
+        <div className="h-fit w-[70%] lg:w-[40%]  bg-primary dark:bg-slate-800 rounded-4xl border border-slate-200 dark:border-slate-700 shadow-2xl box--shadow--effect">
           <img
             className="  w-full rounded-4xl"
             src="https://dl.aminghadim.com/main/IMG_20260615_001105_602.webp"
