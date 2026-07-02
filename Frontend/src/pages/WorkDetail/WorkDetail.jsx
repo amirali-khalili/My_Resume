@@ -36,6 +36,9 @@ function WorkDetail() {
           <p className="max-w-xl text-sm text-secondary-light dark:text-secondary-dark sm:text-base">
             {work.desc}
           </p>
+           <p className="max-w-xl text-sm text-secondary-light dark:text-secondary-dark sm:text-base">
+            {work.desc2}
+          </p>
         </div>
 
         <a
@@ -46,16 +49,19 @@ function WorkDetail() {
         >
           <span>مشاهده وب‌سایت</span>
 
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-4 h-4"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-          >
-            <path d="M14 5l7 7m0 0l-7 7m7-7H3" />
-          </svg>
+     <svg
+  xmlns="http://www.w3.org/2000/svg"
+  className="w-5 h-5"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  strokeWidth="2"
+  strokeLinecap="round"
+  strokeLinejoin="round"
+>
+  <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z" />
+  <circle cx="12" cy="12" r="3" />
+</svg>
         </a>
       </div>
 
@@ -80,7 +86,7 @@ function WorkDetail() {
 
       <div className="relative z-10 mt-10 text-center">
         <Link
-          to="/"
+          to="/portfolio"
           className="text-sm transition-colors text-secondary-light dark:text-secondary-dark hover:text-primary"
         >
           ← بازگشت به نمونه‌کارها

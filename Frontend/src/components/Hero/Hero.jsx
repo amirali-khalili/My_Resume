@@ -2,7 +2,7 @@ import React from "react";
 import { FaDownload } from "react-icons/fa6";
 import toast, { Toaster } from "react-hot-toast";
 import TypingEffect from "../TypingEffect/TypingEffect";
-import rez from "../../assets/images/Portfolio/rezome.jpg";
+import rez from "../../assets/images/Portfolio/AmirAliKhalili.pdf";
 
 function Hero() {
   const skills = ["طراح اپلیکیشن", "طراح سایت", "سئو", "تمامی خدمات مربوط به سایت"];

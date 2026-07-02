@@ -3,8 +3,12 @@ import { Link } from "react-router-dom";
 import works from "../../../public/data/worksData";
 
 function PortfolioSection() {
-  const [activeCategory, setActiveCategory] = useState("religious");
-  const activeWorks = works[activeCategory] || [];
+  const [activeCategory] = useState("religious");
+
+  // فقط نمونه‌کارهای با id های 1 تا 3
+  const activeWorks = (works[activeCategory] || []).filter(
+    (work) => work.id >= 1 && work.id <= 3
+  );
 
   return (
     <section className="container relative py-10">
@@ -29,13 +33,16 @@ function PortfolioSection() {
               alt={work.title}
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
+
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+
             <div className="absolute inset-0 rounded-2xl ring-1 ring-white/10 group-hover:ring-primary/60 transition-all duration-300"></div>
 
             <div className="absolute bottom-0 right-0 left-0 p-5 text-right">
               <h3 className="text-lg font-Morabba-Bold text-white sm:text-xl">
                 {work.title}
               </h3>
+
               <p className="mt-2 text-sm text-gray-300 leading-relaxed">
                 {work.desc}
               </p>
@@ -43,11 +50,11 @@ function PortfolioSection() {
           </Link>
         ))}
       </div>
-      <div className="relative flex items-center justify-center z-50 mt-12 cursor-pointer">
+
+      <div className="relative flex items-center justify-center z-50 mt-12">
         <Link
-          to={"/portfolio"}
-          rel="noopener noreferrer"
-          className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-Morabba-Bold text-white transition-all duration-300 rounded-xl bg-primary hover:opacity-90 hover:scale-105 w-fit shrink-0"
+          to="/portfolio"
+          className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-Morabba-Bold text-white transition-all duration-300 rounded-xl bg-primary hover:opacity-90 hover:scale-105 w-fit"
         >
           <span>مشاهده نمونه کارها</span>
 
