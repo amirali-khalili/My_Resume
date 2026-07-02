@@ -4,14 +4,13 @@ import { createContext, useState, useEffect, useContext } from "react";
 const ThemeContext = createContext();
 
 export function ThemeProvider({ children }) {
-  const [darkMode, setDarkMode] = useState(true);
-  
-
-  useEffect(() => {
-    const savedMode = localStorage.getItem("darkMode") === "true";
-    setDarkMode(savedMode);
-    if (savedMode) document.documentElement.classList.add("dark");
-  }, []);
+  // مقدار اولیه رو مستقیم از localStorage می‌خونیم (نه توی useEffect)
+  // اینجوری از همون render اول مقدار درست رو داریم و flash هم نداریم
+  const [darkMode, setDarkMode] = useState(() => {
+    const saved = localStorage.getItem("darkMode");
+    // اگه چیزی ذخیره نشده بود (کاربر جدید) => پیش‌فرض true (دارک)
+    return saved === null ? true : saved === "true";
+  });
 
   useEffect(() => {
     if (darkMode) {
