@@ -51,7 +51,7 @@ function Hero() {
         <div className="h-fit w-[70%] lg:w-[40%]  bg-primary dark:bg-slate-800 rounded-4xl border border-slate-200 dark:border-slate-700 shadow-2xl box--shadow--effect">
           <img
             className="  w-full rounded-4xl"
-            src="../../src/assets/images/Portfolio/beh.jpg"
+            src="https://dl.aminghadim.com/main/IMG_1225.webp"
             alt=""
           />
         </div>
